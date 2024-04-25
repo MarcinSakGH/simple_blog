@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>Remove post</title>
+</head>
+<body>
+    <h1>Delete post</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Confirm if you want to remove {{ post.title }}</p>
+        <button type="submit">Confirm</button>
+        <a href="{% url 'post-list' %}">Cancel</a>
+    </form>
+</body>
+</html>

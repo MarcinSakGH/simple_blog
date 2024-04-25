@@ -3,11 +3,14 @@
     <title>Simple blog app</title>
 </head>
 <body>
-    <h1>Posts</h1>
+    <h1>Simple Blog</h1>
     {% for post in posts %}
-        <a href="{% url 'post-detail' post.id%}">{{ post.title }}</a>
-        <p>Content: {{ post.content }}</p>
+        <h2><a href="{% url 'post-detail' post.id%}">{{ post.title }}</a></h2>
+        <p>{{ post.content }}</p>
+        <p><a href="{% url 'remove-post' post.id %}">Remove post</a></p>
 
     {% endfor %}
+
+    <a href="{% url 'create-post' %}">Add new post</a>
 </body>
 </html>

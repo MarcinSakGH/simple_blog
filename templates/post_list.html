@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title>Simple blog app</title>
+</head>
+<body>
+    <h1>Posts</h1>
+    {% for post in posts %}
+        <p>Title: {{ post.title }}</p>
+        <p>Content: {{ post.content }}</p>
+
+    {% endfor %}
+</body>
+</html>
